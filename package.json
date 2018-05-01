@@ -1,0 +1,21 @@
+{
+	"name": "wxqrcode",
+	"version": "1.0.0",
+	"description": "获取微信二维码图片",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.18.0",
+		"body-parser": "^1.18.2",
+		"cookie-parser": "^1.4.3",
+		"express": "^4.16.3",
+		"express-session": "^1.15.6",
+		"jade": "^1.11.0",
+		"request": "^2.85.0"
+	}
+}

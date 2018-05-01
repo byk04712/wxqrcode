@@ -1,0 +1,56 @@
+html
+	head
+		title 生成微信二维码图片
+		link(rel="stylesheet", href="/index.css")
+		script(src="http://code.jquery.com/jquery-1.7.2.js")
+		script(src="/index.js")
+	body
+		h1 获取二维码 - 小程序（接口B）
+		form(action="/qrcode", method="POST")
+			p(class="header")
+				label AppID：
+				input(type='text', name="appid", placeholder="在此处输入AppID(小程序ID)")
+				label AppSecret：
+				input(type='text', name="secret", placeholder="在此处输入AppSecret(小程序密钥)	")
+			table
+				thead
+					tr
+						th 参数
+						th 类型
+						th 默认值
+						th 说明
+				tbody
+					tr
+						td scene
+						td String
+						td
+							input(type="text", name="scene", value="goodsId=123", placeholder="传递参数等")
+						td 最大32个可见字符，只支持数字，大小写英文以及部分特殊字符：!#$&'()*+,/:;=?@-._~，其它字符请自行编码为合法字符（因不支持%，中文无法使用 urlencode 处理，请使用其他编码方式）
+					tr
+						td page
+						td String
+						td
+							input(type="text", name="page", value="pages/product/index" placeholder="输入小程序页路径")
+						td 必须是已经发布的小程序存在的页面（否则报错），例如 "pages/index/index" ,根路径前不要填加'/',不能携带参数（参数请放在scene字段里），如果不填写这个字段，默认跳主页面
+					tr
+						td width
+						td Int
+						td
+							input(type="text", name="width", value="430")
+						td 二维码的宽度
+					tr
+						td auto_color
+						td Bool
+						td
+							input(type="checkbox", name="autoColor", id="autoColor")
+						td 自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调
+					tr
+						td line_color
+						td Object
+						td
+							input(type="text", name="lineColor", id="lineColor", value='{"r":"0","g":"0","b":"0"}')
+						td auto_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"} 十进制表示
+				tfoot
+					tr
+						td(colspan="4")
+							button 生成二维码

@@ -1,0 +1,46 @@
+.header {
+	width: 1080px;
+}
+.header label {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+}
+table {
+	border-spacing: 0;
+	border: 1px #eee solid;
+	width: 1080px;
+	min-width: 700px;
+}
+table thead tr {
+	height: 50px;
+	background-color: #eee;
+}
+table tbody tr td {
+	padding: 10px 30px;
+	border-bottom: 1px #eee solid;
+}
+input[type='text'] {
+	border: 1px #eee solid;
+	height: 36px;
+	width: 250px;
+	padding-left: 10px;
+	font-size: 14px;
+}
+table tbody tr td input[type='checkbox'] {
+	height: 20px;
+	width: 20px;
+}
+table tfoot tr {
+	height: 80px;
+}
+table tfoot tr td {
+	padding-left: 100px;
+}
+table tfoot tr td button {
+	border: none;
+	background-color: #1aad16;
+	color: white;
+	padding: 10px 30px;
+	font-size: 16px;
+}
